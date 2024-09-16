@@ -57,10 +57,10 @@ else:
 
         # Prepare the parameters dictionary
         camera_params = {
-            'K': data['K'].T,
+            'K': data['K'], #after Aug_update, no longer need to do this, the origional script did so.
             'RDistort': data['RDistort'],
             'TDistort': data['TDistort'],
-            'r': data['r'].T,
+            'r': data['r'], #try taking this T off as well
             't': data['t']
         }
 
