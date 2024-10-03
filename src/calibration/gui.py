@@ -180,6 +180,17 @@ class CalibrationWindow(QMainWindow):
         monofont = QFont("Monospace")
         monofont.setStyleHint(QFont.StyleHint.Monospace)
         self.calibration_log.setFont(monofont)
+        
+        # Hardcoded default values (can be changed later in the GUI)
+        self.extrinsics_dir_edit.setText("G:\\Videos\\6cam\\lq53\\2024_10_03_micecolor_test\\calib_before\\extrinsics\\")  # Hardcoded extrinsics path
+        self.output_dir_edit.setText("G:\\Videos\\6cam\\lq53\\2024_10_03_micecolor_test\\calib_before\\")  # Hardcoded output directory
+        self.intrinsics_hires_edit.setText("G:\\Videos\\6cam\\lq53\\calib_tests\\2024_04_26_chris_test_mir_intrinsic\\pyxy3d_noT\\")  # Hardcoded intrinsics override
+        self.chessboard_rows.setValue(6)  # Hardcoded chessboard rows
+        self.chessboard_cols.setValue(9)  # Hardcoded chessboard columns
+        self.chessboard_size.setValue(23.00)  # Hardcoded square size in mm
+        self.intrinsics_hires_toggle.setChecked(True)  # Check the toggle for using existing intrinsics
+
+        
 
         try:
             for key, type, object in self.mappings:
